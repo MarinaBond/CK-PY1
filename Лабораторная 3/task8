@@ -1,0 +1,15 @@
+money_capital = 10000
+salary = 5000
+spend = 6000
+increase = 0.05
+
+need_money = 0
+current_spend = salary - spend
+
+month = 0  # количество месяцев, которое можно прожить
+
+while money_capital + current_spend >= spend:
+    money_capital += current_spend
+    spend = spend * (increase + 1)
+    month += 1
+print(month)
